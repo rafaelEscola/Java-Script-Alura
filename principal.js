@@ -1,25 +1,35 @@
 document.querySelector(".titulo");)
 			var titulo = document.querySelector(".titulo");
-var paciente = document.query.Selector("#primeiro-paciente");
-
-var tdPeso = paciente.querySelector(".info-peso");
-var peso = tdPeso.
+var paciente = document.querySelector("#primeiro-paciente");
 
 var tdAltura = paciente.querySelector(".info-altura");
-var altura = tdAltura.textContente;
-
-var imc = peso / (altura * altura);
-
+var tdPeso = paciente.querySelector(".info-peso");
 var tdImc = paciente.querySelector(".info-imc");
-z
-if(peso < 0 > 1000){
-    console.log("Peso inválido);	
-}	
 
-if(altura < 0){
-    console.log("Peso inválido);	
-}		
 
-console.log(imc);
+var altura = tdAltura.textContent;
+var peso = tdPeso.textContent;
 
-tdImc.textContent = imc;
+var alturaEhValida = true;
+var pesoEhValido = true;
+
+if (peso <= 0 || peso > 1000) {
+    console.log("Peso inválido!");
+    tdPeso.textContent = "Peso inválido!";
+    pesoEhValido = false;
+
+}
+
+if (altura <= 0 || altura >= 3) {
+    console.log("Altura inválida!");
+    tdAltura.textContent = "Altura inválida!";
+    alturaEhValida = false;
+}
+
+if (alturaEhValida && pesoEhValido) {
+
+    var imc = peso / (altura * altura);
+    tdImc.textContent = imc;    
+} else {
+    tdImc.textContent = "Altura e/ou peso inválidos!"
+}
