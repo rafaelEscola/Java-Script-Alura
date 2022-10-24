@@ -1,6 +1,8 @@
 document.querySelector(".titulo");)
 			var titulo = document.querySelector(".titulo");
-var paciente = document.querySelector("#primeiro-paciente");
+
+var pacientes = document.querySelectorAll(".paciente");
+console.log(pacientes);
 
 var tdAltura = paciente.querySelector(".info-altura");
 var tdPeso = paciente.querySelector(".info-peso");
