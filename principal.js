@@ -44,3 +44,9 @@ if (alturaEhValida && pesoEhValido) {
     var imc = peso / (altura * altura);
     tdImc.textContent = imc.toFixed(2);
 }
+
+titulo.addEventListener("click")
+
+function mostraMensagem() {
+    console.log("")	
+}
