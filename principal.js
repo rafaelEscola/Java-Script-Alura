@@ -45,8 +45,6 @@ if (alturaEhValida && pesoEhValido) {
     tdImc.textContent = imc.toFixed(2);
 }
 
-titulo.addEventListener("click")
-
-function mostraMensagem() {
-    console.log("")	
-}
+titulo.addEventListener("click", function (){
+    console.log("Olha só posso chamar uma função anônima.")
+});
